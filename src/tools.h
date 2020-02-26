@@ -23,9 +23,9 @@ class Tools {
                                 const std::vector<Eigen::VectorXd> &ground_truth);
 
   /**
-   * A helper method to calculate Jacobians.
+   * A helper method to calculate Jacobians. (implemented in kalman_filter.h)
    */
-  Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
+  // Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
 
 };
 
