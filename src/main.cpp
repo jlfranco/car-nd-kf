@@ -139,10 +139,8 @@ int main() {
           std::string sensor_type_str =
               (meas_package.sensor_type_==MeasurementPackage::RADAR)?"R ":"L ";
           std::cout << sensor_type_str;
-          std::cout << ground_truth.back()(0) << " " << ground_truth.back()(1);
-          std::cout << " " << p_x << " " << p_y << "\n";
-          //std::cout << "RMSE: x: " << RMSE(0) << " y: " << RMSE(1) << " vx: " <<
-          //    RMSE(2) << " vy: " << RMSE(3) << "\n";
+          std::cout << "RMSE: x: " << RMSE(0) << " y: " << RMSE(1) << " vx: " <<
+              RMSE(2) << " vy: " << RMSE(3) << "\n";
           auto msg = "42[\"estimate_marker\"," + msgJson.dump() + "]";
           // std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
